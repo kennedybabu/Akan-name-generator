@@ -8,4 +8,9 @@ button {
 
 form {
     align-items: center;
+    max-width: 500px;
+}
+
+.form-control {
+    max-width: 10rem;
 }

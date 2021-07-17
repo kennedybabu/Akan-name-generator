@@ -21,7 +21,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
     var CC = firstDigit + secondDigit
     var YY = thirdDigit + fourthDigit    
 
-    let message = "your Aknan name is "
+    let message = "your Akan name is "
 
 
     if (userDay < 0 || userDay > 31 && userMonth <= 0 || userMonth > 12) {

@@ -2,6 +2,9 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    /* align-items: center;
+    display: flex;
+    justify-content: center; */
 }
 
 #form {
@@ -11,8 +14,18 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    background-color: tomato;
 }
 
 .form-control {
-    max-width: 10rem;
+    max-width: 8rem;
+    border-radius: 25px;
+}
+
+#output-container {
+    text-align: center;
+}
+
+#output-container {
+    margin-top: 1rem;
 }

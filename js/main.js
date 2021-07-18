@@ -1,7 +1,7 @@
 const form = document.getElementById("form")
 
 maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
-femalNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
+femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
 
 document.getElementById("form").addEventListener("submit", function(e) {
     e.preventDefault()
@@ -30,13 +30,15 @@ document.getElementById("form").addEventListener("submit", function(e) {
     } else if( male.checked == true) {
         var birthDay =   ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(userMonth+1)/10)) + userDay ) % 7
         var key = parseInt(birthDay)
-        const aknanName = maleNames[key]
-        document.getElementById("output").innerHTML = message.concat(aknanName) 
+        var akanName = maleNames[key]
+        document.getElementById("output").innerHTML = message.concat(akanName) 
         
     } if (female.checked == true) {
         var birthDay =   ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(userMonth+1)/10)) + userDay ) % 7
         var key = parseInt(birthDay)
-        console.log(femalNames[key])        
+        var akanName = femaleNames[key]
+        document.getElementById("output").innerHTML = message.concat(akanName) 
+               
     } 
 
 })

@@ -8,39 +8,44 @@
     <title>Akan Name Generator</title>
 </head>
 <body>
+    <nav class="logo">AkanGenerator</nav>
       <div class="container">
-        <div class="holder">
-            <form id="form">
-                <div id="inputs">
-                    <div>
-                        <label for="day">DAY</label><br>
-                        <input type="number" id="inputDay">
-                    </div>
-                    <div>
-                        <label for="month">Month</label><br>
-                        <input type="number" id="inputMonth">
-                    </div>
-                    <div>
-                        <label for="day">Year</label><br>
-                        <input type="number" id="inputYear">
-                    </div>
-                </div>                
+            <div class="pic">lets go</div>
+            <div class="holder">
+                <p class="intro">Hello_<br>
+                Frequently in Ghana, children are given their first name as a 'day name' which correspons to the day in the week they born.</p>
+                <form id="form">
+                    <div id="inputs">
+                        <div>
+                            <label for="day">Day</label><br>
+                            <input type="number" id="inputDay">
+                        </div>
+                        <div>
+                            <label for="month">Month</label><br>
+                            <input type="number" id="inputMonth">
+                        </div>
+                        <div>
+                            <label for="day">Year</label><br>
+                            <input type="number" id="inputYear">
+                        </div>
+                    </div>                
 
-                <div class="form-radio">
-                    <label for="male">Male</label>
-                    <input value="male" id="male" name="gender" type="radio" >
-                    
-                    <label for="female">Female</label>
-                    <input value="female" id="female" name="gender" type="radio">
-                </div>
+                    <h4>Choose your gender</h4>
+                    <div class="form-radio">
+                        <label for="male">Male</label>
+                        <input value="male" id="male" name="gender" type="radio" >
+                        
+                        <label for="female">Female</label>
+                        <input value="female" id="female" name="gender" type="radio">
+                    </div>
 
-                <button>Check</button>
+                    <button>GENERATE NAME</button>
 
-                <div id="output-container">
-                    <h4 id="output"></h4>
-                </div>
-            </form>
-        </div>
+                    <div id="output-container">
+                        <h4 id="output"></h4>
+                    </div>
+                </form>
+            </div>
     </div>
 
 <script src="./js/main.js"></script>

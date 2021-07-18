@@ -21,7 +21,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
     var CC = firstDigit + secondDigit
     var YY = thirdDigit + fourthDigit    
 
-    let message = "your Akan name is "
+    let message = "Your Akan name is "
 
 
     if (userDay < 0 || userDay > 31 && userMonth <= 0 || userMonth > 12) {
@@ -37,7 +37,11 @@ document.getElementById("form").addEventListener("submit", function(e) {
         var birthDay =   ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(userMonth+1)/10)) + userDay ) % 7
         var key = parseInt(birthDay)
         var akanName = femaleNames[key]
-        document.getElementById("output").innerHTML = message.concat(akanName) 
+        if(akanName === undefined) {
+            alertUserYear()
+        } else {
+            document.getElementById("output").innerHTML = message.concat(akanName) 
+        }
                
     } 
 
@@ -45,4 +49,8 @@ document.getElementById("form").addEventListener("submit", function(e) {
 
 function alertUser(){
     alert("Enter valid day")
+}
+
+function alertUserYear() {
+    alert("Enter a valid Year")
 }

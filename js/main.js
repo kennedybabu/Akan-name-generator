@@ -30,10 +30,12 @@ document.getElementById("form").addEventListener("submit", function(e) {
     let message = "Your Akan name is "
 
     //validate user input
-    if (userDay < 0 || userDay > 31 && userMonth <= 0 || userMonth > 12) {
+    if (userDay <= 0 || userDay > 31 ) {
         alertUser()
         return
-    } else if( male.checked == true) {
+    } if (userMonth <= 0 || userMonth > 12) {
+        alertMonth()
+    }  else if( male.checked == true) {
         var birthDay =   ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(userMonth+1)/10)) + userDay ) % 7
         var key = parseInt(birthDay)
         var akanName = maleNames[key]
@@ -65,4 +67,8 @@ function alertUser(){
 
 function alertUserYear() {
     alert("Enter a valid Year")
+}
+
+function alertMonth() {
+    alert("enter valid month")
 }
